@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">TeamSync</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="mb-3">
+            <h1 class="fw-bold text-gradient d-inline">Welcome, Employee!</h1>
+        </div>
+
+        <!-- Tab Controls -->
+        <ul class="nav nav-tabs" id="employeeDashboardTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="task-list-tab" data-bs-toggle="tab" data-bs-target="#taskListTab"
+                    type="button" role="tab" aria-controls="taskListTab" aria-selected="true">Task List</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messagesTab"
+                    type="button" role="tab" aria-controls="messagesTab" aria-selected="false">Messages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="attendance-tab" data-bs-toggle="tab" data-bs-target="#attendance" type="button"
+                    role="tab" aria-controls="attendance" aria-selected="false">Attendance</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profileTab"
+                    type="button" role="tab" aria-controls="profileTab" aria-selected="false">Profile</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="employeeDashboardContent">
+            <!-- Task List -->
+            <div class="tab-pane fade show active" id="taskListTab" role="tabpanel" aria-labelledby="task-list-tab">
+                <h3 class="mt-4">Task List</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Assigned By</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Complete the project report</td>
+                            <td>John Doe (Manager)</td>
+                            <td>2024-10-25</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>Update website content</td>
+                            <td>Sarah Miller (Manager)</td>
+                            <td>2024-10-30</td>
+                            <td>Not Started</td>
+                        </tr>
+                        <tr>
+                            <td>Prepare presentation slides</td>
+                            <td>Emily Davis (Manager)</td>
+                            <td>2024-11-01</td>
+                            <td>Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Messages -->
+            <div class="tab-pane fade" id="messagesTab" role="tabpanel" aria-labelledby="messages-tab">
+                <h3 class="mt-4">Messages</h3>
+                <div class="list-group">
+                    <!-- Message from Manager -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">John Doe (Manager)</h5>
+                        <p class="mb-1">Please update the project report by tomorrow. Let me know if you need any help.
+                        </p>
+                        <small>10 minutes ago</small>
+                    </a>
+                    <!-- Message from Colleague -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">Jane Smith (Employee)</h5>
+                        <p class="mb-1">Hey, can you send me the file for the website update?</p>
+                        <small>1 hour ago</small>
+                    </a>
+                    <!-- Message from Manager -->
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">Emily Davis (Manager)</h5>
+                        <p class="mb-1">Great job on the presentation! Thanks for your hard work.</p>
+                        <small>Yesterday</small>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="tab-pane fade" id="profileTab" role="tabpanel" aria-labelledby="profile-tab">
+                <h3 class="mt-4">Profile</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="employeeName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="employeeName" value="David Garcia">
+                    </div>
+                    <div class="mb-3">
+                        <label for="employeeEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="employeeEmail" value="david@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="employeeRole" class="form-label">Role</label>
+                        <input type="text" class="form-control" id="employeeRole" value="Employee" disabled>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                </form>
+            </div>
+
+            <!-- Attendance Tab -->
+            <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
+                <h3 class="mt-3">Attendance</h3>
+                <p>Please scan the QR code to register your attendance:</p>
+            
+                <!-- Dummy Camera Scanner -->
+                <div id="qrScanner" class="border p-3" style="max-width: 400px;">
+                    <p class="text-muted">Simulated Camera Feed (QR Scanner)</p>
+                    <div class="bg-dark" style="height: 300px;">
+                        <!-- Dummy camera feed area -->
+                        <p class="text-center text-light pt-5">[ Camera Simulated Feed ]</p>
+                    </div>
+                    <button class="btn btn-success mt-3" id="scanButton">Scan QR Code</button>
+                </div>
+            
+                <!-- Success message for attendance (dummy) -->
+                <div id="attendanceMessage" class="mt-3 d-none">
+                    <p class="text-success">Attendance successfully registered!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dummy QR scanner function
+        document.getElementById('scanButton').addEventListener('click', function () {
+            // Simulating the QR scan and successful attendance registration
+            setTimeout(() => {
+                document.getElementById('attendanceMessage').classList.remove('d-none');
+            }, 2000); // Simulates the delay of scanning
+        });
+    </script>
+</body>
+
+</html>
