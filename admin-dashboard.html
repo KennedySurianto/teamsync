@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">TeamSync</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="mb-3">
+            <h1 class="fw-bold text-gradient d-inline">Welcome, Admin!</h1>
+        </div>
+
+        <!-- Tab Controls -->
+        <ul class="nav nav-tabs" id="adminDashboardTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users"
+                    type="button" role="tab" aria-controls="users" aria-selected="true">Manage Users</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="attendance-tab" data-bs-toggle="tab" data-bs-target="#attendance"
+                    type="button" role="tab" aria-controls="attendance" aria-selected="false">Manage Attendance</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tasks-tab" data-bs-toggle="tab" data-bs-target="#tasks" type="button"
+                    role="tab" aria-controls="tasks" aria-selected="false">Manage Tasks</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports" type="button"
+                    role="tab" aria-controls="reports" aria-selected="false">Reports</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
+                    role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="adminDashboardTabsContent">
+            <!-- Manage Users Tab -->
+            <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+                <h2 class="mt-4">Manage Users</h2>
+                <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addUserModal">Add New
+                    User</button>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Manager</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>Employee</td>
+                                <td>Inactive</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Michael Brown</td>
+                                <td>michael@example.com</td>
+                                <td>Employee</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Johnson</td>
+                                <td>sarah@example.com</td>
+                                <td>Manager</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>David Lee</td>
+                                <td>david@example.com</td>
+                                <td>Employee</td>
+                                <td>Inactive</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Emily Davis</td>
+                                <td>emily@example.com</td>
+                                <td>Manager</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chris Wilson</td>
+                                <td>chris@example.com</td>
+                                <td>Employee</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lisa Thompson</td>
+                                <td>lisa@example.com</td>
+                                <td>Employee</td>
+                                <td>Inactive</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>James White</td>
+                                <td>james@example.com</td>
+                                <td>Manager</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alice Martin</td>
+                                <td>alice@example.com</td>
+                                <td>Employee</td>
+                                <td>Active</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Edit</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Manage Attendance Tab -->
+            <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
+                <h2 class="mt-4">Manage Attendance</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Johnson</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Davis</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Chris Brown</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                            <tr>
+                                <td>Jessica Wilson</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Daniel Martinez</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Miller</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>David Garcia</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Ashley Rodriguez</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                            <tr>
+                                <td>Brian Hernandez</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Linda Lee</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Kevin Walker</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                            <tr>
+                                <td>Nancy Hall</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Paul Young</td>
+                                <td>2024-10-22</td>
+                                <td>Present</td>
+                            </tr>
+                            <tr>
+                                <td>Laura King</td>
+                                <td>2024-10-22</td>
+                                <td>Absent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Manage Tasks Tab -->
+            <div class="tab-pane fade" id="tasks" role="tabpanel" aria-labelledby="tasks-tab">
+                <h2 class="mt-4">Manage Tasks</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="taskName" class="form-label">Task Name</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="taskName" placeholder="Enter task name">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskAssignee" class="form-label">Assign To</label>
+                        <div class="col-md-6">
+                            <select class="form-select" id="taskAssignee">
+                                <option value="john">John Doe</option>
+                                <option value="jane">Jane Smith</option>
+                                <option value="michael">Michael Johnson</option>
+                                <option value="emily">Emily Davis</option>
+                                <option value="chris">Chris Brown</option>
+                                <option value="jessica">Jessica Wilson</option>
+                                <option value="daniel">Daniel Martinez</option>
+                                <option value="sarah">Sarah Miller</option>
+                                <option value="david">David Garcia</option>
+                                <option value="ashley">Ashley Rodriguez</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
+                
+                <div class="table-responsive mt-4">
+                    <h3>Task List</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Task Name</th>
+                                <th>Assigned To</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Complete Report</td>
+                                <td>John Doe</td>
+                                <td>In Progress</td>
+                            </tr>
+                            <tr>
+                                <td>Update Website</td>
+                                <td>Jane Smith</td>
+                                <td>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Prepare Presentation</td>
+                                <td>Michael Johnson</td>
+                                <td>Not Started</td>
+                            </tr>
+                            <tr>
+                                <td>Design New Logo</td>
+                                <td>Emily Davis</td>
+                                <td>In Progress</td>
+                            </tr>
+                            <tr>
+                                <td>Conduct Team Meeting</td>
+                                <td>Chris Brown</td>
+                                <td>Scheduled</td>
+                            </tr>
+                            <tr>
+                                <td>Review Client Feedback</td>
+                                <td>Jessica Wilson</td>
+                                <td>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Implement New Features</td>
+                                <td>Daniel Martinez</td>
+                                <td>In Progress</td>
+                            </tr>
+                            <tr>
+                                <td>Prepare Budget Report</td>
+                                <td>Sarah Miller</td>
+                                <td>Not Started</td>
+                            </tr>
+                            <tr>
+                                <td>Research Market Trends</td>
+                                <td>David Garcia</td>
+                                <td>In Progress</td>
+                            </tr>
+                            <tr>
+                                <td>Finalize Contract</td>
+                                <td>Ashley Rodriguez</td>
+                                <td>Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reports Tab -->
+            <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+                <h2 class="mt-4">Reports</h2>
+                <p>Generate various reports based on user activities and system data.</p>
+                <button class="btn btn-secondary">Download Attendance Report</button>
+                <button class="btn btn-secondary">Download Task Report</button>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <h2 class="mt-4">Settings</h2>
+                <p>Manage system settings and admin profile.</p>
+                <button class="btn btn-primary">Change Password</button>
+                <button class="btn btn-primary">Update Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userRole" class="form-label">Role</label>
+                            <select class="form-select" id="userRole">
+                                <option value="manager">Manager</option>
+                                <option value="employee">Employee</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
